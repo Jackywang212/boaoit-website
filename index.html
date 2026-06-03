@@ -3,85 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博奥IT - BOAO IT | Web制作・アニメーション・砂漠植物輸入販売</title>
+    
+    <!-- ==========================================
+         高级 SEO 优化配置 (日本国内SEO标准)
+         ========================================== -->
+    <title>東京博奥IT通信株式会社 | 公式サイト - Web制作・アニメーション・砂漠植物輸入販売</title>
+    <meta name="description" content="東京博奥IT通信株式会社（BOAO IT）のオフィシャルサイト。最先端のECサイト・独立站構築（Shopify）、2D/3Dアニメーション・映像制作、および希少な砂漠植物（コーデックス・塊根植物・アガベ）の国際進出口貿易・卸売販売を展開する次世代のハイブリッド企業です。">
+    <meta name="keywords" content="東京博奥IT通信株式会社, 博奥IT, BOAO IT, Web制作 東京, 独立站構築, Shopify制作, アニメーション制作, 映像制作, 砂漠植物 貿易, コーデックス 輸入, 塊根植物 卸売, アガベ 通販">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://boaoit.online/">
+    
+    <!-- OGP 社交媒体分享卡片优化 (Ins, X, LINE等分享时完美显示) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="東京博奥IT通信株式会社 | Web制作・映像アニメーション・砂漠植物貿易">
+    <meta property="og:description" content="デジタル技術と植物の力で、新しい未来を革新する。ITソリューションと希少植物貿易を融合した、次世代のハイブリッド企業。">
+    <meta property="og:url" content="https://boaoit.online/">
+    <meta property="og:site_name" content="東京博奥IT通信株式会社">
+    <meta name="twitter:card" content="summary_large_image">
+
     <style>
-        /* 页面核心样式 */
+        /* 核心样式重置与高级钛金银底色 */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; color: #333; line-height: 1.8; background-color: #f7f9f8; }
+        html, body { 
+            background: #eef3f0 !important; /* 强制锁定高级冷银灰色背景 */
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; 
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* 科技特技：背景漂浮的植物科技纳米绿色粒子（纯CSS，极其高级） */
+        body::before, body::after {
+            content: ''; position: fixed; width: 320px; height: 320px; 
+            background: radial-gradient(circle, rgba(46, 125, 50, 0.09) 0%, transparent 70%); 
+            z-index: -1; animation: floatParticles 14s infinite ease-in-out; pointer-events: none;
+        }
+        body::after { top: 60%; right: -5%; animation-delay: -7s; width: 450px; height: 450px; }
+        @keyframes floatParticles {
+            0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+            50% { transform: translateY(-50px) scale(1.1) rotate(180deg); }
+        }
         
-        /* 导航栏 */
-        header { background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
-        .logo { font-size: 22px; font-weight: 700; color: #004488; text-decoration: none; letter-spacing: 0.5px; }
-        .nav-menu a { margin-left: 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 15px; transition: color 0.3s; }
-        .nav-menu a:hover { color: #2e7d32; }
+        /* 极简高透光磨砂导航栏 */
+        header { 
+            background: rgba(255, 255, 255, 0.85) !important; 
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: sticky; top: 0; z-index: 100; 
+        }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
+        .logo { 
+            font-size: 19px; font-weight: 800; color: #003366 !important; text-decoration: none; letter-spacing: 0.5px;
+            background: linear-gradient(45deg, #003366, #1b4d3e); -webkit-background-clip: text;
+        }
+        .nav-menu a { margin-left: 20px; text-decoration: none; color: #334455 !important; font-weight: 700; font-size: 14.5px; transition: color 0.3s; }
+        .nav-menu a:hover { color: #2e7d32 !important; }
 
-        /* 主视觉 Banner 动画 */
+        /* 银炫流光 Hero 巨幕 */
         .hero { 
-            background: linear-gradient(135px, #002244 0%, #004488 50%, #2e7d32 100%); 
-            background-size: 200% 200%;
-            animation: gradientAnimation 12s ease infinite;
-            color: #ffffff; 
-            padding: 110px 20px; 
-            text-align: center; 
+            position: relative; padding: 120px 20px; text-align: center; 
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 0%, transparent 100%);
         }
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        
+        /* 高定深绿哑光按钮 */
+        .btn { 
+            display: inline-block; padding: 15px 50px; 
+            background: linear-gradient(135deg, #113322 0%, #2e7d32 100%) !important; 
+            color: #ffffff !important; text-decoration: none; border-radius: 6px; font-weight: 700; 
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.25); transition: all 0.3s ease;
         }
-        .hero h1 { font-size: 38px; margin-bottom: 25px; font-weight: 700; letter-spacing: 1px; }
-        .hero p { font-size: 17px; max-width: 750px; margin: 0 auto 35px; opacity: 0.9; }
-        .btn { display: inline-block; padding: 13px 40px; background: #ffffff; color: #004488; text-decoration: none; border-radius: 4px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: transform 0.3s; }
-        .btn:hover { transform: translateY(-3px); color: #2e7d32; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4); }
 
-        /* 通用布局与动画效果 */
+        /* 页面区块通用布局 */
         .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 28px; margin-bottom: 45px; color: #002244; font-weight: 700; }
-        .section-title::after { content: ''; display: block; width: 45px; height: 3px; background: #2e7d32; margin: 12px auto 0; }
-
-        /* 公司简介 */
-        .about-box { background: #ffffff; padding: 45px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); line-height: 2; }
-        .about-text { font-size: 16px; color: #444; text-align: justify; }
-
-        /* 核心业务网格 */
-        .grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-        .card { 
-            background: #ffffff; flex: 1; min-width: 300px; max-width: 340px; padding: 40px 25px; border-radius: 8px; 
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02); text-align: center; position: relative; overflow: hidden;
-            transition: all 0.3s ease; border-top: 4px solid #004488;
+        .section-title { text-align: center; font-size: 26px; margin-bottom: 45px; font-weight: 800; color: #002244 !important; letter-spacing: 1.5px; }
+        .section-title::after { 
+            content: ''; display: block; width: 40px; height: 3px; 
+            background: linear-gradient(90deg, #003366, #2e7d32); margin: 12px auto 0; border-radius: 2px;
         }
-        .card:nth-child(3) { border-top: 4px solid #2e7d32; } /* 植物板块用绿色顶边 */
-        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
-        .card h3 { font-size: 20px; margin-bottom: 15px; color: #111; }
-        .card p { color: #666; font-size: 14.5px; text-align: left; }
 
-        /* 联系我们列表 */
-        .contact-box { background: #ffffff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); max-width: 600px; margin: 0 auto; }
-        .contact-item { display: flex; margin-bottom: 18px; font-size: 15px; border-bottom: 1px dashed #eee; padding-bottom: 14px; }
+        /* 悬浮白金磨砂质感卡片盒 */
+        .about-box { 
+            background: rgba(255, 255, 255, 0.75) !important; border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 45px 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        /* 核心业务高级悬浮卡片 */
+        .grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+        .card { 
+            background: rgba(255, 255, 255, 0.65) !important; border: 1px solid rgba(255, 255, 255, 0.8);
+            flex: 1; min-width: 300px; max-width: 340px; padding: 40px 25px; border-radius: 12px; 
+            transition: all 0.3s ease;
+        }
+        .card:hover { 
+            transform: translateY(-5px); background: #ffffff !important;
+            border-color: rgba(46,125,50,0.3); box-shadow: 0 15px 35px rgba(46,125,50,0.1); 
+        }
+
+        /* 联系信息银白面板 */
+        .contact-box { 
+            background: rgba(255, 255, 255, 0.8) !important; border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 40px 35px; border-radius: 12px; max-width: 650px; margin: 0 auto; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .contact-item { display: flex; margin-bottom: 20px; font-size: 15px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 14px; }
         .contact-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .label { width: 110px; font-weight: bold; color: #555; }
-        .value { flex: 1; color: #222; }
+        .label { width: 120px; font-weight: 700; color: #1c4d32 !important; }
+
+        /* SNS 社交分享图标区域样式 */
+        .sns-container { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+        .sns-button {
+            display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px;
+            border-radius: 30px; font-size: 14px; font-weight: 700; text-decoration: none;
+            transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .sns-instagram { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7) !important; color: #ffffff !important; }
+        .sns-x { background: #111111 !important; color: #ffffff !important; border: 1px solid rgba(255,255,255,0.1); }
+        .sns-button:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
         
         /* 页脚 */
-        footer { background: #111111; color: #ffffff; text-align: center; padding: 30px 20px; font-size: 13px; margin-top: 80px; opacity: 0.85; }
+        footer { 
+            background: #ffffff !important; color: #667788 !important; text-align: center; padding: 30px 20px; font-size: 12.5px; margin-top: 80px; 
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .footer-sns a { color: #556677 !important; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .footer-sns a:hover { color: #2e7d32 !important; }
 
-        /* 手机适配 */
+        /* 手机端完美自适应 */
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 12px; padding: 15px; }
-            .nav-menu a { margin: 0 8px; font-size: 14px; }
-            .hero h1 { font-size: 26px; }
-            .hero p { font-size: 15px; }
+            .nav-container { flex-direction: column; gap: 10px; padding: 15px; }
+            .nav-menu a { margin: 0 8px; font-size: 13.5px; }
             .card { max-width: 100%; }
+            .sns-container { flex-direction: column; align-items: center; gap: 12px; }
+            .sns-button { width: 80%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 导航栏 -->
+    <!-- 极简高透光导航栏 -->
     <header>
         <div class="nav-container">
-            <a href=" " class="logo">博奥IT / BOAO IT</a >
+            <a href=" " class="logo" style="color: #002244 !important; font-weight: 900;">東京博奥IT通信株式会社</a >
             <div class="nav-menu">
                 <a href="#about">会社概要</a >
                 <a href="#services">事業内容</a >
@@ -90,69 +152,89 @@
         </div>
     </header>
 
-    <!-- 动态背景主横幅 -->
+    <!-- 银炫科技主横幅（核心文字全部嵌入极深蓝黑内联色，防模糊防穿帮） -->
     <section class="hero">
-        <h1>デジタル技術と植物の力で、新しい未来を革新する</h1>
-        <p>博奥IT（ボアオIT）は、最先端のECサイト・Web制作、クリエイティブなアニメーション制作に加え、希少な砂漠植物の輸入販売・グリーンビジネスを展開するハイブリッド企業です。</p >
+        <h1 style="color: #001530 !important; font-weight: 900; font-size: 34px; text-shadow: 2px 2px 0px #ffffff, 0 0 20px rgba(46,125,50,0.15); line-height: 1.5;">
+            デジタル技術と植物の力で、<br>新しい未来を革新する
+        </h1>
+        <p style="color: #223344 !important; font-weight: 600; font-size: 16.5px; margin-top: 25px; margin-bottom: 40px; line-height: 1.9;">
+            東京博奥IT通信株式会社は、最先端のECサイト・独立站制作、クリエイティブな映像・アニメーション分野、そして世界中の希少な砂漠植物の進出口貿易を展開する、次世代のハイブリッド企業です。
+        </p >
         <a href="#contact" class="btn">お問い合わせ</a >
     </section>
 
-    <!-- 关于我们（重新润色） -->
+    <!-- 公司概要 -->
     <section id="about" class="section">
         <h2 class="section-title">会社概要</h2>
         <div class="about-box">
-            <div class="about-text">
-                当社は2024年4月に設立され、デジタルソリューションとグローバル貿易を融合させた革新的なサービスを展開しております。これまで培ってきた確かなIT技術を基盤に、お客様のブランド価値を高める高品質なウェブサイト制作や独立系ECサイト（独立站）の構築、そして心に響くアニメーション・デジタルコンテンツの制作を行っています。<br><br>
+            <div class="about-text" style="color: #112233 !important; font-weight: 600;">
+                当社は2024年4月に設立され、デジタルソリューションとグローバル貿易を融合させた革新的なサービスを展開しております。これまで培ってきた確かなIT・通信技術を基盤に、お客様のブランド価値を高める高品質なウェブサイト制作や独立系ECサイト（独立站）の構築、転換率を高めるWEBデザイン、迅速な通信ネットワークソリューション、部署内の業務効率化、そして心に響くアニメーション・デジタルコンテンツの制作を行っています。<br><br>
                 さらに、次なる事業革新として、私たちは「砂漠植物（コーデックス、多肉植物、希少サボテンなど）」の国際進出口貿易およびオンライン・オフライン販売事業を始動いたしました。最先端のテクノロジーと、生命力溢れる植物の魅力を融合させ、国内外のお客様へ新たな価値と豊かなライフスタイルをワンストップでご提供いたします。
             </div>
         </div>
     </section>
 
-    <!-- 核心业务（三大新支柱） -->
+    <!-- 核心业务网格 -->
     <section id="services" class="section">
         <h2 class="section-title">事業内容</h2>
         <div class="grid">
             <div class="card">
-                <h3>🌐 Web制作 & 独立站構築</h3>
-                <p>Shopifyなどを活用した国内外向けの独立系ECサイト（独立站）の構築から、企業オフィシャルサイトの新規制作・リニューアルまで幅広く対応。集客力とコンバージョン率を高める高品質なサイトをご提案します。</p >
+                <h3 style="color: #002244 !important; font-weight: 800;">🌐 Web & 独立站構築</h3>
+                <p style="color: #334455 !important; font-weight: 600; margin-top: 12px;">Shopifyなどを活用した国内外向けの独立系ECサイト（独立站）の構築から、企業オフィシャルサイトの新規制作・リニューアルまで幅広く対応。集客力と通信安定性、コンバージョン率を高める高品質なサイトをご提案します。</p >
             </div>
             <div class="card">
-                <h3>🎬 アニメーション & 映像制作</h3>
-                <p>2D/3Dアニメーション、PR動画、モーショングラフィックスなどの制作を行います。視覚的で分かりやすく、ユーザーの記憶に残る魅力的なデジタル動画コンテンツを制作し、ブランド認知拡大をサポートします。</p >
+                <h3 style="color: #002244 !important; font-weight: 800;">🎬 映像・アニメーション</h3>
+                <p style="color: #334455 !important; font-weight: 600; margin-top: 12px;">2D/3Dアニメーション、PR動画、モーショングラフィックスなどの制作を行います。視覚的で分かりやすく、ユーザーの記憶に残る魅力的なデジタル動画コンテンツを制作し、ブランド認知拡大をサポートします。</p >
             </div>
             <div class="card">
-                <h3>🌵 砂漠植物の進出口貿易・販売</h3>
-                <p>世界各地から厳選された希少な砂漠植物（塊根植物/コーデックス、アガベ、サボテンなど）の輸出入、検疫手続き、卸売および小売を展開。日本のグリーンインテリア市場に高品質な植物を安定的にお届けします。</p >
+                <h3>🌵 砂漠植物の貿易・販売</h3>
+                <p style="color: #334455 !important; font-weight: 600; margin-top: 12px;">世界各地から厳選された希少な砂漠植物（塊根植物/コーデックス、アガベ、サボテンなど）の輸出入、検疫手続き、卸売および小売を展開。日本のグリーンインテリア市場に高品質な植物を安定的にお届けします。</p >
             </div>
         </div>
     </section>
 
-    <!-- 联系我们（同步图片最新数据） -->
+    <!-- 联系我们（已完美配置企业邮箱与SNS按钮） -->
     <section id="contact" class="section">
         <h2 class="section-title">お問い合わせ</h2>
         <div class="contact-box">
             <div class="contact-item">
                 <span class="label">会社名</span>
-                <span class="value">博奥株式会社 (BOAO IT)</span>
+                <span class="value" style="color: #112233 !important; font-weight: 700;">東京博奥IT通信株式会社</span>
             </div>
             <div class="contact-item">
                 <span class="label">電話番号</span>
-                <span class="value">03-6820-6568</span>
+                <span class="value" style="color: #112233 !important; font-weight: 700;">03-6820-6568</span>
             </div>
             <div class="contact-item">
                 <span class="label">メールアドレス</span>
-                <span class="value">jackywang20110115@gmail.com</span>
+                <span class="value" style="color: #004488 !important; font-weight: 700; text-decoration: underline;">
+                    <a href="mailto:jackywang@boaoit.online" style="color: #004488 !important;">jackywang@boaoit.online</a >
+                </span>
             </div>
             <div class="contact-item">
                 <span class="label">所在地</span>
-                <span class="value">東京都葛飾区新小岩3-29-7 206号</span>
+                <span class="value" style="color: #112233 !important; font-weight: 600;">東京都葛飾区新小岩3-29-7 206号</span>
+            </div>
+            
+            <!-- 增加的官方 SNS 分享与互动入口 -->
+            <div class="sns-container">
+                <a href="https://instagram.com" target="_blank" class="sns-button sns-instagram">
+                    📸 Instagram 公式
+                </a >
+                <a href="https://x.com" target="_blank" class="sns-button sns-x">
+                    🐦 公式 X (Twitter)
+                </a >
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2026 博奥IT (BOAO IT). All Rights Reserved.</p >
+        <div class="footer-sns" style="margin-bottom: 15px;">
+            <a href="https://instagram.com" target="_blank">Instagram</a > | 
+            <a href="https://x.com" target="_blank">X (Twitter)</a >
+        </div>
+        <p>&copy; 2026 東京博奥IT通信株式会社. All Rights Reserved.</p >
     </footer>
 
 </body>
