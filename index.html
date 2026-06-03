@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博奥IT - BOAO IT | 专业的IT技术服务与培训</title>
+    <style>
+        /* 核心样式：确保在任何设备上都能完美打开 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333; line-height: 1.7; background-color: #f4f7f6; }
+        
+        /* 导航栏 */
+        header { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
+        .logo { font-size: 22px; font-weight: 700; color: #003366; text-decoration: none; letter-spacing: 0.5px; }
+        .nav-menu a { margin-left: 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 15px; }
+        .nav-menu a:hover { color: #0066cc; }
+
+        /* 主视觉 Banner */
+        .hero { background: linear-gradient(135px, #002244 0%, #004488 100%); color: #ffffff; padding: 90px 20px; text-align: center; }
+        .hero h1 { font-size: 36px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 17px; max-width: 700px; margin: 0 auto 35px; opacity: 0.85; }
+        .btn { display: inline-block; padding: 12px 35px; background: #ffffff; color: #004488; text-decoration: none; border-radius: 4px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        /* 通用布局 */
+        .section { padding: 70px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 28px; margin-bottom: 40px; color: #002244; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 40px; height: 3px; background: #0066cc; margin: 12px auto 0; }
+
+        /* 公司简介 */
+        .about-box { background: #ffffff; padding: 40px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); text-align: center; }
+        .about-text { max-width: 800px; margin: 0 auto; font-size: 16px; color: #555; text-align: justify; text-justify: inter-ideograph; }
+
+        /* 服务卡片 */
+        .grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+        .card { background: #ffffff; flex: 1; min-width: 280px; max-width: 340px; padding: 35px 25px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); border-top: 4px solid #0052d4; text-align: center; }
+        .card h3 { font-size: 20px; margin-bottom: 15px; color: #111; }
+        .card p { color: #666; font-size: 14.5px; text-align: left; }
+
+        /* 联系我们 */
+        .contact-box { background: #ffffff; padding: 40px 20px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); max-width: 550px; margin: 0 auto; }
+        .contact-item { display: flex; margin-bottom: 15px; font-size: 15px; border-bottom: 1px dashed #eee; padding-bottom: 12px; }
+        .contact-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .label { width: 90px; font-weight: bold; color: #666; }
+        .value { flex: 1; color: #222; }
+        
+        /* 页脚 */
+        footer { background: #111111; color: #ffffff; text-align: center; padding: 25px 20px; font-size: 13px; margin-top: 60px; opacity: 0.8; }
+
+        /* 响应式手机适配 */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 12px; padding: 12px; }
+            .nav-menu a { margin: 0 8px; font-size: 14px; }
+            .hero h1 { font-size: 26px; }
+            .hero p { font-size: 15px; }
+            .card { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href=" " class="logo">博奥IT / BOAO IT</a >
+            <div class="nav-menu">
+                <a href="#about">关于我们</a >
+                <a href="#services">核心业务</a >
+                <a href="#contact">联系我们</a >
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>用技术连接未来，以专业构筑基石</h1>
+        <p>博奥IT致力于提供高质量的软件技术研发、高效的系统集成维护，以及面向全球化市场的专业 IT 技术与商务日语研修培训。</p >
+        <a href="#contact" class="btn">立即咨询</a >
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">关于我们</h2>
+        <div class="about-box">
+            <div class="about-text">
+                博奥IT是一家专注于高新技术研发与国际化专业人才培养的综合型 IT 企业。我们不仅拥有一支经验丰富、技术过硬的软件研发团队，能够为客户提供高稳定性、定制化的行业系统解决方案；同时，我们紧密结合跨国企业及技术出海的需求，提供深度的 IT 技术培训、企业网络运行维护及行业日语研修。博奥IT始终坚持以诚为本，用精湛的技术与周到的服务为您的业务保驾护航。
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">核心业务</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💻 软件定制研发</h3>
+                <p>承接各类企业管理系统、官方网站、Web应用和移动端研发。从前期的商业需求分析、系统架构设计，到高标准的代码编写与产品交付，为您提供全周期支持。</p >
+            </div>
+            <div class="card">
+                <h3>⚙️ 系统运行维护</h3>
+                <p>提供云服务器环境部署、企业内网维护、数据备份隔离及系统故障排查。通过科学规范的运营模式，保障客户线上业务 7x24 小时高可靠运行。</p >
+            </div>
+            <div class="card">
+                <h3>🇯🇵 行业日语研修</h3>
+                <p>针对 IT 职场办公、开发技术术语及商务对接专门打造的特色研修板块。帮助技术人才和企业团队跨越语言障碍，顺利对接国际化的 IT 业务与合作。</p >
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-box">
+            <div class="contact-item">
+                <span class="label">公司名称</span>
+                <span class="value">博奥信息技术 (BOAO IT)</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">联系电话</span>
+                <span class="value">+81 70-9017-1278</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">企业邮箱</span>
+                <span class="value">jackywang20110115@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">联系地址</span>
+                <span class="value">日本东京都荒川区南千住 (〒116-0003)</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 博奥IT (BOAO IT). All Rights Reserved.</p >
+    </footer>
+
+</body>
+</html>
